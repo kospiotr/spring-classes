@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans
+        http://www.springframework.org/schema/beans/spring-beans.xsd">
+
+    <bean id="billingService1" class="com.github.kospiotr.spring.BillingService">
+        <property name="creditCardProcessor">
+            <bean id="creditCardProcessor" class="com.github.kospiotr.spring.CreditCardProcessor"/>
+        </property>
+        <property name="transactionLogger">
+            <bean id="transactionLogger" class="com.github.kospiotr.spring.TransactionLogger"/>
+        </property>
+    </bean>
+    <bean id="billingService2" class="com.github.kospiotr.spring.BillingService">
+        <constructor-arg name="creditCardProcessor">
+            <bean id="creditCardProcessor" class="com.github.kospiotr.spring.CreditCardProcessor"/>
+        </constructor-arg>
+        <constructor-arg name="transactionLogger">
+            <bean id="transactionLogger" class="com.github.kospiotr.spring.TransactionLogger"/>
+        </constructor-arg>
+    </bean>
+
+</beans>
