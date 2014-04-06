@@ -3,7 +3,7 @@
     <modelVersion>4.0.0</modelVersion>
 
     <groupId>com.github.pkosmowski</groupId>
-    <artifactId>01-HelloSpring</artifactId>
+    <artifactId>05-BeanDefinition</artifactId>
     <version>1.0-SNAPSHOT</version>
     <packaging>jar</packaging>
 
