@@ -1,7 +1,5 @@
 package com.github.kospiotr.spring;
 
-import java.time.LocalDateTime;
-import java.util.HashSet;
 import org.springframework.context.ApplicationContext;
 import org.springframework.context.support.ClassPathXmlApplicationContext;
 
@@ -14,7 +12,7 @@ public class AppInjectingByConstructor {
 
         //requesting bean from the container by the id
         BillingService billingService = applicationContext.getBean("billingService", BillingService.class);
-        billingService.processPayment(new Payment("Pizza payment", "123", "321", 20, LocalDateTime.now(), new HashSet<String>()));
+        billingService.processPayment(new Payment("Pizza payment", "123", "321", 20));
     }
 
 }

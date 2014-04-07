@@ -1,8 +1,5 @@
 package com.github.kospiotr.spring;
 
-import java.time.LocalDateTime;
-import java.util.Set;
-
 /**
  *
  * @author Piotr
@@ -13,16 +10,15 @@ public class Payment {
     private String accountFrom;
     private String accountTo;
     private double amount;
-    private LocalDateTime date;
-    private Set<String> metadata;
 
-    public Payment(String paymentTitle, String accountFrom, String accountTo, double amount, LocalDateTime date, Set<String> metadata) {
+    public Payment() {
+    }
+
+    public Payment(String paymentTitle, String accountFrom, String accountTo, double amount) {
         this.paymentTitle = paymentTitle;
         this.accountFrom = accountFrom;
         this.accountTo = accountTo;
         this.amount = amount;
-        this.date = date;
-        this.metadata = metadata;
     }
 
     public String getPaymentTitle() {
@@ -57,25 +53,9 @@ public class Payment {
         this.amount = amount;
     }
 
-    public LocalDateTime getDate() {
-        return date;
-    }
-
-    public void setDate(LocalDateTime date) {
-        this.date = date;
-    }
-
-    public Set<String> getMetadata() {
-        return metadata;
-    }
-
-    public void setMetadata(Set<String> metadata) {
-        this.metadata = metadata;
-    }
-
     @Override
     public String toString() {
-        return "Payment{" + "paymentTitle=" + paymentTitle + ", accountFrom=" + accountFrom + ", accountTo=" + accountTo + ", amount=" + amount + ", date=" + date + ", metadata=" + metadata + '}';
+        return "Payment{" + "paymentTitle=" + paymentTitle + ", accountFrom=" + accountFrom + ", accountTo=" + accountTo + ", amount=" + amount + '}';
     }
 
 }
