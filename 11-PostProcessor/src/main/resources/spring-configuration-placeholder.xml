@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans
+        http://www.springframework.org/schema/beans/spring-beans.xsd">
+
+    <bean id="payment1" class="com.github.kospiotr.spring.Payment">
+        <property name="paymentTitle" value="${paymentTitle1}"/>
+        <property name="accountFrom" value="${accountFrom1}"/>
+        <property name="accountTo" value="${accountTo1}"/>
+        <property name="amount" value="${amount1}"/>
+    </bean>
+    <bean id="payment2" class="com.github.kospiotr.spring.Payment">
+        <property name="paymentTitle" value="${paymentTitle1}"/>
+        <property name="accountFrom" value="${accountFrom1}"/>
+        <property name="accountTo" value="${accountTo1}"/>
+        <property name="amount" value="${amount1}"/>
+    </bean>
+
+    <bean class="org.springframework.beans.factory.config.PropertyPlaceholderConfigurer">
+        <property name="locations" value="classpath:config.properties"/>
+    </bean>
+</beans>
