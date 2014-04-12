@@ -11,7 +11,9 @@
     <context:annotation-config/>
 
     <bean id="billingService" class="com.github.kospiotr.spring.BillingServiceInjectProperty"/>
-    <bean id="creditCardProcessor" class="com.github.kospiotr.spring.CreditCardProcessor"/>
-    <bean id="transactionLogger" class="com.github.kospiotr.spring.TransactionLogger"/>
+    <bean id="creditCardProcessor1" class="com.github.kospiotr.spring.CreditCardProcessor"/>
+    <bean id="creditCardProcessor2" class="com.github.kospiotr.spring.CreditCardProcessor"/>
+    <bean id="transactionLogger1" class="com.github.kospiotr.spring.TransactionLogger"/>
+    <bean id="transactionLogger2" class="com.github.kospiotr.spring.TransactionLogger"/>
 
 </beans>

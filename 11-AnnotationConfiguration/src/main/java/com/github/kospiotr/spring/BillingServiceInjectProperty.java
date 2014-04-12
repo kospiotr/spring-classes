@@ -1,6 +1,7 @@
 package com.github.kospiotr.spring;
 
 import javax.inject.Inject;
+import org.springframework.beans.factory.annotation.Qualifier;
 
 /**
  *
@@ -9,8 +10,10 @@ import javax.inject.Inject;
 public class BillingServiceInjectProperty {
 
     @Inject
+    @Qualifier("creditCardProcessor1")
     private CreditCardProcessor creditCardProcessor;
     @Inject
+    @Qualifier("transactionLogger1")
     private TransactionLogger transactionLogger;
 
     public BillingServiceInjectProperty() {
