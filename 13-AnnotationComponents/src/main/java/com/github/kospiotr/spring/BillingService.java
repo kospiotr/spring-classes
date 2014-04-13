@@ -1,13 +1,13 @@
 package com.github.kospiotr.spring;
 
 import javax.inject.Inject;
-import org.springframework.stereotype.Component;
+import javax.inject.Named;
 
 /**
  *
  * @author Piotr
  */
-@Component
+@Named
 public class BillingService {
 
     @Inject

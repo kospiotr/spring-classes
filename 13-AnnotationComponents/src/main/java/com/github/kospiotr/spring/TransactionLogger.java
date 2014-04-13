@@ -1,12 +1,12 @@
 package com.github.kospiotr.spring;
 
-import org.springframework.stereotype.Component;
+import javax.inject.Named;
 
 /**
  *
  * @author Piotr
  */
-@Component
+@Named
 public class TransactionLogger {
 
     public TransactionLogger() {
