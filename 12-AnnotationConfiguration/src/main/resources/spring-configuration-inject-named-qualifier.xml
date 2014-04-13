@@ -10,10 +10,10 @@
 
     <context:annotation-config/>
 
-    <bean id="billingService" class="com.github.kospiotr.spring.BillingServiceResourceNamed"/>
+    <bean id="billingService" class="com.github.kospiotr.spring.BillingServiceInjectNamedQualifier"/>
     <bean id="creditCardProcessor1" class="com.github.kospiotr.spring.CreditCardProcessor"/>
-    <bean id="creditCardProcessor2" class="com.github.kospiotr.spring.CreditCardProcessor"/>
     <bean id="transactionLogger1" class="com.github.kospiotr.spring.TransactionLogger"/>
+    <bean id="creditCardProcessor2" class="com.github.kospiotr.spring.CreditCardProcessor"/>
     <bean id="transactionLogger2" class="com.github.kospiotr.spring.TransactionLogger"/>
 
 </beans>
