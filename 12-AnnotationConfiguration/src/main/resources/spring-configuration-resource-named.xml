@@ -9,9 +9,9 @@
 
 
     <context:annotation-config/>
-    <bean id="requiredAnnotationBeanPostProcessor" class="org.springframework.beans.factory.annotation.RequiredAnnotationBeanPostProcessor"/>
+    <bean class="org.springframework.context.annotation.CommonAnnotationBeanPostProcessor" />
 
-    <bean id="billingService" class="com.github.kospiotr.spring.BillingServiceResourceSetter"/>
+    <bean id="billingService" class="com.github.kospiotr.spring.BillingServiceResourceNamed"/>
     <bean id="creditCardProcessor1" class="com.github.kospiotr.spring.CreditCardProcessor"/>
     <bean id="creditCardProcessor2" class="com.github.kospiotr.spring.CreditCardProcessor"/>
     <bean id="transactionLogger1" class="com.github.kospiotr.spring.TransactionLogger"/>
